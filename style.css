@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  width: 350px;
+  max-width: 100%;
+}
+
+.progress {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 0%;
+  background-color: #3498db;
+  height: 4px;
+  transition: 0.4s ease;
+}
+
+.progress-container::before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 95%;
+  background-color: #e0e0e0;
+  height: 4px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+}
+
+.circle.active {
+  border-color: #3498db;
+}
+
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  margin: 5px;
+  border-radius: 6px;
+  padding: 8px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
