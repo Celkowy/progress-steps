@@ -24,9 +24,6 @@ function update() {
     } else {
       circle.classList.remove('active')
     }
-
-    console.log(index, currentActive)
-    console.log('\n')
   })
 
   const actives = document.querySelectorAll('.active')
